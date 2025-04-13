@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tic_tac_toe/screens/menu.dart';
 import 'package:tic_tac_toe/utils/Palletes.dart';
 
 void main() {
@@ -12,8 +13,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Tic Tac Toe',
       theme: ThemeData.dark().copyWith(scaffoldBackgroundColor: bgcolor),
+      home: const MainPage(),
     );
   }
 }
