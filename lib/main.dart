@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tic_tac_toe/screens/create_room_scree.dart';
+import 'package:tic_tac_toe/screens/join_room_screen.dart';
 import 'package:tic_tac_toe/screens/menu.dart';
 import 'package:tic_tac_toe/utils/Palletes.dart';
 
@@ -16,7 +18,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Tic Tac Toe',
       theme: ThemeData.dark().copyWith(scaffoldBackgroundColor: bgcolor),
-      home: const MainPage(),
+      routes: {
+        MainPage.routeName: (context) => const MainPage(),
+        JoinRoomScreen.routeName: (context) => const JoinRoomScreen(),
+        CreateRoomScreen.routeName: (context) => CreateRoomScreen(),
+      },
+      initialRoute: MainPage.routeName,
     );
   }
 }
