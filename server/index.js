@@ -10,7 +10,7 @@ var server = http.createServer(app);
 
 app.use(express.json());
 
-const DB = "mongodb+srv://test:test223309@cluster0.osk7fj0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const DB = "mongodb url";
 
 const io = new Server(server); // Initialize the Socket.IO server
 
