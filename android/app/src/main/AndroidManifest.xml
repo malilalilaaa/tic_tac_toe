@@ -2,7 +2,8 @@
     <application
         android:label="tic_tac_toe"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher"
+        android:userCleartextTraffic="true">
         <activity
             android:name=".MainActivity"
             android:exported="true"

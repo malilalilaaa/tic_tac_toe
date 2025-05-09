@@ -5,7 +5,10 @@ class SocketMethods {
 
   void createRoom(String username) {
     if (username.isNotEmpty) {
-      _socketClient.emit('createRoom', {'username': username});
+      _socketClient.emit('createRoom', {
+        'username': username,
+        'standard': 'high',
+      });
     }
   }
 }
