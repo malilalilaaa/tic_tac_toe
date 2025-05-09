@@ -12,15 +12,15 @@ app.use(express.json());
 
 const DB = "mongodb+srv://test:test223309@cluster0.osk7fj0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
-// const io = require('socket.io')(server);
+const io = require('socket.io')(server);
   
-//   io.on('connection', (socket) => {
-//     console.log('New client connected', socket.id);
+  io.on('connection', (socket) => {
+    console.log('New client connected', socket.id);
     
-// socket.on("createRoom", ({ username }) => {
-//       console.log(username);
-//     });
-//   });
+socket.on("createRoom", ({ username }) => {
+      console.log(username);
+    });
+  });
   
 
 mongoose.connect(DB).then(() => {
